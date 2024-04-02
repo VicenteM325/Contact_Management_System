@@ -16,8 +16,6 @@ public:
     Nodo* siguiente;
 
     Nodo(std::string nombre, std::string tipo);
-    //Funcion hash para los campos
-    size_t hashCampo() const;
 };
 
 

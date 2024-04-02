@@ -1,9 +1,9 @@
 #include <iostream>
 #include <regex>
 #include <string>
-#include "Grupo.h"
-#include "TablaHash.h"
-#include "TablaHashCampos.h"
+#include "grupo/Grupo.h"
+#include "tabla/TablaHash.h"
+#include "tabla_campos/TablaHashCampos.h"
 
 using namespace std;
 
@@ -25,24 +25,27 @@ int main() {
     bool continuar = true;
     // Ciclo para ingresar entradas del usuario
     while (continuar) {
+        cout << "---CONTACT MANAGEMENT SYSTEM---" << endl;
         cout << "Seleccione una opción:" << endl;
         cout << "1. Agregar un nuevo grupo" << endl;
         cout << "2. Agregar un nuevo contacto" << endl;
         cout << "3. Buscar un contacto" << endl;
-        cout << "4. Salir" << endl;
+        cout << "4. Reporte de Grupos" << endl;
+        cout << "5. Salir" << endl;
         cout << "Opción: ";
         cin >> opcion;
 
         switch (opcion) {
             case '1': {
                 do {
+                    system("clear");
                     cout
                             << "Ingrese los datos del nuevo grupo en el formato 'ADD NEW-GROUP <nombre> FIELDS (campo1 tipo1, campo2 tipo2, ...);'"
                             << endl;
-                    cin.ignore(); // Limpiar el buffer de entrada
+                    cin.ignore();
                     getline(cin, entrada);
 
-                    // Procesamiento de entrada
+
                     smatch matches;
                     if (regex_match(entrada, matches, nuevoGrupo)) {
                         Grupo *nuevo_grupo = new Grupo(matches[1].str());
@@ -61,18 +64,23 @@ int main() {
 
                         // Agregar nuevo grupo a la tabla hash
                         tabla.agregarGrupo(nuevo_grupo);
-                        cout << "Porcentaje ocupado de la tabla hash: " << tabla.porcentajeOcupacion() << "%" << endl;
+                        cout << "Porcentaje ocupado de la tabla hash de grupos: " << tabla.porcentajeOcupacion() << "%" << endl;
                     } else {
                         cout << "Entrada no válida." << endl;
                     }
                     cout << "Si desea ingresar otro grupo (s/n): ";
-                    cin>> conti;
-                }while(conti != "n" && conti != "N");
+                    cin >> conti;
+                } while (conti != "n" && conti != "N");
+
+
                 break;
             }
             case '2': {
                 do {
-                    cout<< "Ingrese los datos del nuevo contacto en el formato 'ADD CONTACT IN <nombre_grupo> FIELDS (contacto1, contacto2, ...);'"<< endl;
+                    system("clear");
+                    cout
+                            << "Ingrese los datos del nuevo contacto en el formato 'ADD CONTACT IN <nombre_grupo> FIELDS (contacto1, contacto2, ...);'"
+                            << endl;
                     cin.ignore(); // Limpiar el buffer de entrada
                     getline(cin, entrada);
 
@@ -96,14 +104,17 @@ int main() {
                         cout << "Entrada no válida." << endl;
                     }
                     cout << "Si desea ingresar otro grupo (s/n): ";
-                    cin>> conti;
-                }while(conti !="N" && conti !="n");
+                    cin >> conti;
+                } while (conti != "N" && conti != "n");
 
                 break;
             }
-            case '3':
-                do{
-                    cout << "Ingrese el nombre del grupo y el campo a buscar en el formato 'FIND CONTACT IN <nombre_grupo> CONTACT-FIELD <campo>=<valor>;'" << endl;
+            case '3': {
+                do {
+                    system("clear");
+                    cout
+                            << "Ingrese el nombre del grupo y el campo a buscar en el formato 'FIND CONTACT IN <nombre_grupo> CONTACT-FIELD <campo>=<valor>;'"
+                            << endl;
                     cin.ignore();
                     getline(cin, entrada);
 
@@ -113,7 +124,7 @@ int main() {
                         string campo = matches[2].str();
 
                         // Buscar el grupo correspondiente en la tabla hash
-                        Grupo* grupo = tabla.buscarGrupo(nombreGrupo);
+                        Grupo *grupo = tabla.buscarGrupo(nombreGrupo);
 
                         // Verificar si se encontró el grupo
                         if (grupo != nullptr) {
@@ -122,28 +133,34 @@ int main() {
                         } else {
                             cout << "El grupo '" << nombreGrupo << "' no existe." << endl;
                         }
-                    }
-                    else {
+                    } else {
                         cout << "Entrada no válida." << endl;
                     }
                     cout << "Si desea ingresar otro grupo (s/n): ";
-                    cin>> conti;
-                }while(conti !="N" && conti !="n");
+                    cin >> conti;
+                } while (conti != "N" && conti != "n");
                 break;
-            case '4':
+            }
+            case '4': {
+                tabla.mostrarGrupos();
+                break;
+            }
+            case '5': {
                 continuar = false;
+                // Liberar la memoria asignada a los grupos
+                for (int i = 0; i < TablaHash::CAPACIDAD_INICIAL; ++i) {
+                    for (Grupo *grupo: *tabla.obtenerTabla()) {
+                        delete grupo;
+                    }
+                }
+            }
                 break;
-            default:
-                cout << "Opción no válida." << endl;
+                default:
+                    cout << "Opción no válida." << endl;
+            }
         }
+
+
+        return 0;
     }
 
-    // Liberar la memoria asignada a los grupos
-    for (int i = 0; i < TablaHash::CAPACIDAD_INICIAL; ++i) {
-        for (Grupo* grupo : *tabla.obtenerTabla()) {
-            delete grupo;
-        }
-    }
-
-    return 0;
-}

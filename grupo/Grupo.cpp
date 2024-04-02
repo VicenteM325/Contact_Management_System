@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Grupo.h"
 
+
 // Constructor
 Grupo::Grupo(std::string nombre) {
     this->nombre = nombre;
@@ -20,6 +21,7 @@ void Grupo::agregarCampo(std::string nombre, std::string tipo) {
         }
         actual->siguiente = nuevo_nodo;
     }
+
 }
 
 // Método para agregar un nuevo contacto al grupo
@@ -27,6 +29,8 @@ void Grupo::agregarContacto(std::string contacto) {
     contactos.push_back(contacto);
     std::cout << "Nuevo contacto agregado al grupo '" << nombre << "': " << contacto << std::endl;
 }
+
+
 
 void Grupo::buscarContactos(const std::string& campo) const {
     std::list<std::string> contactosEncontrados;

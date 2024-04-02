@@ -1,10 +1,18 @@
 # ninja log v5
-2113	2211	1712038126396822228	Contact_Management_System	cde1949a57c5fa9b
-1	2112	1712038126296826846	CMakeFiles/Contact_Management_System.dir/main.cpp.o	dc02a0e2682798ff
+2900	3044	1712064880456221845	Contact_Management_System	2e6558c371421af
+1	2899	1712064880308215784	CMakeFiles/Contact_Management_System.dir/main.cpp.o	dc02a0e2682798ff
+2	178	1712060129657119498	CMakeFiles/Contact_Management_System.dir/Nodo.cpp.o	10ee6fa7a598e51d
+0	325	1712064471930022637	CMakeFiles/Contact_Management_System.dir/TablaHashCampos.cpp.o	80206a0ae1cb9016
 1	32	1711511869486025478	CMakeFiles/Contact_Management_System.dir/regexEntrada.cpp.o	3fbd86a7b39fe891
+1	283	1712062969273283522	CMakeFiles/Contact_Management_System.dir/Grupo.cpp.o	148eac9b9dbd0a94
+1	270	1712064877684108163	CMakeFiles/Contact_Management_System.dir/TablaHash.cpp.o	44f05dddc6d754d4
 2	178	1712058270705527993	CMakeFiles/Contact_Management_System.dir/Campo.cpp.o	af41d0778f70d18
-1	182	1712058270709527963	CMakeFiles/Contact_Management_System.dir/Nodo.cpp.o	10ee6fa7a598e51d
-1	314	1712058270841526964	CMakeFiles/Contact_Management_System.dir/Grupo.cpp.o	148eac9b9dbd0a94
-2	371	1712058270897526541	CMakeFiles/Contact_Management_System.dir/TablaHashCampos.cpp.o	80206a0ae1cb9016
-1	1976	1712058272501514416	CMakeFiles/Contact_Management_System.dir/main.cpp.o	dc02a0e2682798ff
-1976	2080	1712058272605513630	Contact_Management_System	c372799ac9b03783
+2	500	1712065384032874066	CMakeFiles/Contact_Management_System.dir/campo/Campo.cpp.o	58b91dcdbca033fb
+1	511	1712065384040874284	CMakeFiles/Contact_Management_System.dir/nodo/Nodo.cpp.o	5807cc008f7d8bb4
+1	645	1712065384180878116	CMakeFiles/Contact_Management_System.dir/grupo/Grupo.cpp.o	ddd75dddb32630e2
+2	772	1712065384304881511	CMakeFiles/Contact_Management_System.dir/tabla_campos/TablaHashCampos.cpp.o	a17153f64d5e4dee
+5	291	1712065636027343632	CMakeFiles/Contact_Management_System.dir/tabla/TablaHash.cpp.o	3f86cee599822128
+4	2693	1712065638427401750	CMakeFiles/Contact_Management_System.dir/main.cpp.o	dc02a0e2682798ff
+2693	2828	1712065638563405042	Contact_Management_System	931ec5f9a8020437
+1	3551	1712066116370145856	CMakeFiles/Contact_Management_System.dir/main.cpp.o	dc02a0e2682798ff
+3552	3744	1712066116566150015	Contact_Management_System	931ec5f9a8020437

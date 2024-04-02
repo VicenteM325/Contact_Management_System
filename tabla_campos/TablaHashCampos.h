@@ -7,7 +7,7 @@
 
 
 #include <vector>
-#include "Campo.h"
+#include "../campo/Campo.h"
 
 class TablaHashCampos {
 private:
