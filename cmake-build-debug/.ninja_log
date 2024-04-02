@@ -1,0 +1,10 @@
+# ninja log v5
+2113	2211	1712038126396822228	Contact_Management_System	cde1949a57c5fa9b
+1	2112	1712038126296826846	CMakeFiles/Contact_Management_System.dir/main.cpp.o	dc02a0e2682798ff
+1	32	1711511869486025478	CMakeFiles/Contact_Management_System.dir/regexEntrada.cpp.o	3fbd86a7b39fe891
+2	178	1712058270705527993	CMakeFiles/Contact_Management_System.dir/Campo.cpp.o	af41d0778f70d18
+1	182	1712058270709527963	CMakeFiles/Contact_Management_System.dir/Nodo.cpp.o	10ee6fa7a598e51d
+1	314	1712058270841526964	CMakeFiles/Contact_Management_System.dir/Grupo.cpp.o	148eac9b9dbd0a94
+2	371	1712058270897526541	CMakeFiles/Contact_Management_System.dir/TablaHashCampos.cpp.o	80206a0ae1cb9016
+1	1976	1712058272501514416	CMakeFiles/Contact_Management_System.dir/main.cpp.o	dc02a0e2682798ff
+1976	2080	1712058272605513630	Contact_Management_System	c372799ac9b03783

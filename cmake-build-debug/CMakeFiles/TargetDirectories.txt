@@ -1,0 +1,3 @@
+/home/vicente/CLionProjects/Contact_Management/Contact_Management_System/cmake-build-debug/CMakeFiles/Contact_Management_System.dir
+/home/vicente/CLionProjects/Contact_Management/Contact_Management_System/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vicente/CLionProjects/Contact_Management/Contact_Management_System/cmake-build-debug/CMakeFiles/rebuild_cache.dir
