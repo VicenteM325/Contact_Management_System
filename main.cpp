@@ -5,6 +5,7 @@
 #include "tabla/TablaHash.h"
 #include "tabla_campos/TablaHashCampos.h"
 #include "arbol_avl/ArbolAVL.h"
+#include "GeneradorDot.cpp"
 
 using namespace std;
 
@@ -21,6 +22,7 @@ int main() {
     //Arbol AVL para campos
     ArbolAVL arbolAvl;
 
+
     // Variables para entrada del usuario
     string entrada;
     string conti;
@@ -34,7 +36,8 @@ int main() {
         cout << "2. Agregar un nuevo contacto" << endl;
         cout << "3. Buscar un contacto" << endl;
         cout << "4. Reporte de Grupos" << endl;
-        cout << "5. Salir" << endl;
+        cout << "5. Graficar campo de Grupos" << endl;
+        cout << "6. Salir" << endl;
         cout << "Opción: ";
         cin >> opcion;
 
@@ -149,9 +152,19 @@ int main() {
             }
             case '4': {
                 tabla.mostrarGrupos();
+               tabla.mostrarContactosEnGrupos();
+
+            }
+
+                break;
+
+            case '5': {
+                GeneradorDot::generarArchivoDot(arbolAvl, "arbol_avl.dot");
+                system("dot -Tpng arbol_avl.dot -o arbol_avl.png");
+                system("xdg-open arbol_avl.png");
                 break;
             }
-            case '5': {
+            case '6': {
                 continuar = false;
                 // Liberar la memoria asignada a los grupos
                 for (int i = 0; i < TablaHash::CAPACIDAD_INICIAL; ++i) {

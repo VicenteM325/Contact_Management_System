@@ -85,17 +85,17 @@ build CMakeFiles/Contact_Management_System.dir/tabla/TablaHash.cpp.o: CXX_COMPIL
   OBJECT_DIR = CMakeFiles/Contact_Management_System.dir
   OBJECT_FILE_DIR = CMakeFiles/Contact_Management_System.dir/tabla
 
-build CMakeFiles/Contact_Management_System.dir/NodoAVL.cpp.o: CXX_COMPILER__Contact_Management_System_unscanned_Debug /home/vicente/CLionProjects/Contact_Management/Contact_Management_System/NodoAVL.cpp || cmake_object_order_depends_target_Contact_Management_System
-  DEP_FILE = CMakeFiles/Contact_Management_System.dir/NodoAVL.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Contact_Management_System.dir
-  OBJECT_FILE_DIR = CMakeFiles/Contact_Management_System.dir
-
 build CMakeFiles/Contact_Management_System.dir/arbol_avl/ArbolAVL.cpp.o: CXX_COMPILER__Contact_Management_System_unscanned_Debug /home/vicente/CLionProjects/Contact_Management/Contact_Management_System/arbol_avl/ArbolAVL.cpp || cmake_object_order_depends_target_Contact_Management_System
   DEP_FILE = CMakeFiles/Contact_Management_System.dir/arbol_avl/ArbolAVL.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Contact_Management_System.dir
   OBJECT_FILE_DIR = CMakeFiles/Contact_Management_System.dir/arbol_avl
+
+build CMakeFiles/Contact_Management_System.dir/GeneradorDot.cpp.o: CXX_COMPILER__Contact_Management_System_unscanned_Debug /home/vicente/CLionProjects/Contact_Management/Contact_Management_System/GeneradorDot.cpp || cmake_object_order_depends_target_Contact_Management_System
+  DEP_FILE = CMakeFiles/Contact_Management_System.dir/GeneradorDot.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Contact_Management_System.dir
+  OBJECT_FILE_DIR = CMakeFiles/Contact_Management_System.dir
 
 
 # =============================================================================
@@ -105,7 +105,7 @@ build CMakeFiles/Contact_Management_System.dir/arbol_avl/ArbolAVL.cpp.o: CXX_COM
 #############################################
 # Link the executable Contact_Management_System
 
-build Contact_Management_System: CXX_EXECUTABLE_LINKER__Contact_Management_System_Debug CMakeFiles/Contact_Management_System.dir/main.cpp.o CMakeFiles/Contact_Management_System.dir/grupo/Grupo.cpp.o CMakeFiles/Contact_Management_System.dir/nodo/Nodo.cpp.o CMakeFiles/Contact_Management_System.dir/tabla_campos/TablaHashCampos.cpp.o CMakeFiles/Contact_Management_System.dir/campo/Campo.cpp.o CMakeFiles/Contact_Management_System.dir/tabla/TablaHash.cpp.o CMakeFiles/Contact_Management_System.dir/NodoAVL.cpp.o CMakeFiles/Contact_Management_System.dir/arbol_avl/ArbolAVL.cpp.o
+build Contact_Management_System: CXX_EXECUTABLE_LINKER__Contact_Management_System_Debug CMakeFiles/Contact_Management_System.dir/main.cpp.o CMakeFiles/Contact_Management_System.dir/grupo/Grupo.cpp.o CMakeFiles/Contact_Management_System.dir/nodo/Nodo.cpp.o CMakeFiles/Contact_Management_System.dir/tabla_campos/TablaHashCampos.cpp.o CMakeFiles/Contact_Management_System.dir/campo/Campo.cpp.o CMakeFiles/Contact_Management_System.dir/tabla/TablaHash.cpp.o CMakeFiles/Contact_Management_System.dir/arbol_avl/ArbolAVL.cpp.o CMakeFiles/Contact_Management_System.dir/GeneradorDot.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Contact_Management_System.dir
   POST_BUILD = :

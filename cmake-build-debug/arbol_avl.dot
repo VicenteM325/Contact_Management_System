@@ -1,0 +1,13 @@
+digraph ArbolAVL {
+    Edad [label="Edad"];
+    CantidadAmigos [label="CantidadAmigos"];
+    Ambriento [label="Ambriento"];
+    Nombre [label="Nombre"];
+    Enfermedades [label="Enfermedades"];
+    Telefono [label="Telefono"];
+    Edad -> CantidadAmigos;
+    Edad -> Nombre;
+    CantidadAmigos -> Ambriento;
+    Nombre -> Enfermedades;
+    Nombre -> Telefono;
+}
