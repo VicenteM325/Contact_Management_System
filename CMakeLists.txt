@@ -12,4 +12,8 @@ add_executable(Contact_Management_System main.cpp
         tabla_campos/TablaHashCampos.h
         tabla_campos/TablaHashCampos.cpp
         campo/Campo.cpp
-        tabla/TablaHash.cpp)
+        tabla/TablaHash.cpp
+        NodoAVL.h
+        NodoAVL.cpp
+        arbol_avl/ArbolAVL.h
+        arbol_avl/ArbolAVL.cpp)

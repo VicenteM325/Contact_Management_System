@@ -14,7 +14,6 @@ public:
     std::string tipo;
 
     Campo(std::string nombre, std::string tipo);
-    size_t hashCampo() const;
 };
 
 

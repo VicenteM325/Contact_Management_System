@@ -4,6 +4,7 @@
 #include "grupo/Grupo.h"
 #include "tabla/TablaHash.h"
 #include "tabla_campos/TablaHashCampos.h"
+#include "arbol_avl/ArbolAVL.h"
 
 using namespace std;
 
@@ -17,6 +18,8 @@ int main() {
     TablaHash tabla;
     // Tabla hash para campos
     TablaHashCampos tablaCampos;
+    //Arbol AVL para campos
+    ArbolAVL arbolAvl;
 
     // Variables para entrada del usuario
     string entrada;
@@ -60,11 +63,14 @@ int main() {
                             string tipo = (*i)[2].str();
                             nuevo_grupo->agregarCampo(nombre, tipo);
                             tablaCampos.agregarCampo(nombre, tipo);
+                            Campo nuevoCampo(nombre,tipo);
+                            arbolAvl.insertar(nuevoCampo);
                         }
 
                         // Agregar nuevo grupo a la tabla hash
                         tabla.agregarGrupo(nuevo_grupo);
                         cout << "Porcentaje ocupado de la tabla hash de grupos: " << tabla.porcentajeOcupacion() << "%" << endl;
+                        cout << "Porcentaje ocupado de la tabla hash de campos: " << tablaCampos.porcentajeOcupacionCampos() << "%" << endl;
                     } else {
                         cout << "Entrada no válida." << endl;
                     }
@@ -149,10 +155,11 @@ int main() {
                 continuar = false;
                 // Liberar la memoria asignada a los grupos
                 for (int i = 0; i < TablaHash::CAPACIDAD_INICIAL; ++i) {
-                    for (Grupo *grupo: *tabla.obtenerTabla()) {
+                    for (Grupo* grupo : *tabla.obtenerTabla()) {
                         delete grupo;
                     }
                 }
+                break;
             }
                 break;
                 default:

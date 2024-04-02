@@ -28,6 +28,7 @@ void TablaHashCampos::rehash() {
         }
     }
 
+    tabla.clear();
     tabla = std::move(nuevaTabla);
 }
 
@@ -41,6 +42,10 @@ void TablaHashCampos::agregarCampo(std::string nombre, std::string tipo) {
     tabla[indice].push_back(nuevoCampo);
     ++elementos;
     std::cout << "Campo '" << nombre << "' asignado al índice: " << indice << std::endl;
+}
+
+double TablaHashCampos::porcentajeOcupacionCampos() {
+    return (double)elementos / tabla.size() * 100;
 }
 
 bool TablaHashCampos::buscarCampo(std::string nombre, std::string tipo) const {

@@ -35,8 +35,14 @@ void Grupo::agregarContacto(std::string contacto) {
 void Grupo::buscarContactos(const std::string& campo) const {
     std::list<std::string> contactosEncontrados;
     for (const auto& contacto : contactos) {
-        if (contacto == campo) {
-            contactosEncontrados.push_back(contacto);
+        // Separar el contacto en nombre y valor
+        size_t pos = contacto.find(',');
+        std::string nombre = contacto.substr(0, pos);
+        std::string valor = contacto.substr(pos + 1);
+
+        // Verificar si el nombre del campo coincide
+        if (nombre == campo) {
+            contactosEncontrados.push_back(valor);
         }
     }
 
